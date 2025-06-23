@@ -9,7 +9,7 @@
     position: fixed;
     height: 60px!important;
     overflow: hidden;
-    z-index: 149;
+    z-index: 150;
     border-bottom: 2px outset;
 }
 #sidebarMenu {
@@ -64,7 +64,7 @@ input[type="checkbox"]:checked ~ #sidebarMenu {
     box-sizing: border-box;
     cursor: pointer;
     position: absolute;
-    z-index: 150;
+    z-index: 151;
     height: 100%;
     width: 100%;
     top: 22px;
