@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>青鬼6.23ポータブルダウンロード</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="header"></div>
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+        </label>
+        <div id="sidebarMenu">
+            <ul class="sidebarMenuInner">
+                <li><a href="https://tanaka2404.github.io/">メインページ</a></li>
+                <li><a href="https://tanaka2404.github.io/chrome-extensions/">chrome拡張機能</a></li>
+                <li><a href="https://tanaka2404.github.io/clock/">時計</a></li>
+                <li><a href="https://tanaka2404.github.io/probability-game/">確率ゲーム</a></li>
+                <li><a href="https://tanaka2404.github.io/aooni-portable">青鬼6.23ポータブル</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1 class="title">青鬼ver6.23ポータブル</h1>
+            <div class="maincontent">
+                <p>今更感...</p>
+                <button id="downloadbutton" onclick="downloadbuttonclick();">"aooni6.23.zip"をダウンロード</button>
+                <p>ウイルスが怖い方用 : <a href="https://www.virustotal.com/gui/file/861e010a916d268fbdece3f8f21fe6d276ae69583168457fc74bf4b459219cfa" target="_blank">virustotal</a></p>
+            </div>
+        </div>
+        <div class="downloadpopup" id="downloadpopup">
+            <div class="popupblock">
+                <p>本当にダウンロードしますか?</p>
+                <button class="downloadNo" onclick="buttonNoClick();">いいえ</button>
+                <button class="downloadYes" onclick="buttonYesclick();">はい</button>
+            </div>
+            <div class="popupbackground" id="popupbackground"></div>
+        </div>
+        <script>
+            function downloadbuttonclick() {
+                console.log("clicked");
+                document.getElementById("downloadpopup").style.display = "block";
+            }
+            function buttonNoClick(){
+                document.getElementById("downloadpopup").style.display = "none";
+            }
+            function buttonYesclick(){
+                const downloadLink = document.createElement('a');
+                downloadLink.href = 'downloadfiles/aooni6.23.zip';
+                downloadLink.download = 'aooni6.23.zip'; // 保存時のファイル名を指定
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+                document.getElementById("downloadpopup").style.display = "none";
+            }
+        </script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

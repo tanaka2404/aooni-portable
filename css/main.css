@@ -1,0 +1,78 @@
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+body {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.main {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: calc(100% - 60px);
+    border-left: 2px outset #AAA;
+    border-right: 2px outset #FFF;
+    z-index: 1;
+}
+
+.title {
+    position: absolute;
+}
+
+.maincontent {
+    position: absolute;
+    margin-top: 50px;
+}
+
+.downloadpopup {
+    display: none;
+}
+
+.popupbackground {
+    top: 0;
+    left: 0;
+    position: fixed;
+    opacity: 70%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 160;
+}
+
+.popupblock {
+    width: 400px;
+    height: 150px;
+    top: calc(50vh - 75px);
+    left: calc(50vw - 200px);
+    margin-left: auto;
+    position: absolute;
+    justify-content: center;
+    justify-items: center;
+    background-color: #FFF;
+    z-index: 161;
+}
+
+.downloadNo {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.downloadYes {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
